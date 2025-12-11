@@ -7,6 +7,8 @@
 #include <vector>
 using namespace std;
 
+void printWithinRange(map<string, int>, int, int); 
+
 int main() { 
     map<string, int> airportLog; 
 
@@ -40,10 +42,26 @@ int main() {
         }
     }
 
-    cout << endl << "Busiset airport(s) with count " << highestCount << endl; 
+    cout << endl << "Busiest airport(s) with count " << highestCount << endl; 
     for(int i = 0; i < highestAirportsCount.size(); i++) { 
         cout << highestAirportsCount.at(i) << " " << airportLog[highestAirportsCount.at(i)]<< endl; 
     }
 
+    cout << endl;
+
+    printWithinRange(airportLog, 5, 8); 
+    cout << endl;
+    printWithinRange(airportLog, 8, 15); 
+
     return 0; 
+}
+
+void printWithinRange(map<string, int> airportLog, int low, int high) { 
+    cout << "Airports with traffic in range [" << low << ", " << high << "]" << endl;
+    for(auto it = airportLog.begin(); it != airportLog.end(); it++) { 
+        int rangeCount = it->second; 
+        if(rangeCount >= low && rangeCount <= high) { 
+            cout << it->first << " " << it->second << endl; 
+        }
+    }
 }
