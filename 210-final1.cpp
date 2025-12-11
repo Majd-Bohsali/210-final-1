@@ -1,5 +1,5 @@
 // COMSC210 | Final Exam 1 | Majd Bohsali
-// IDE used: Visaul Studio Code
+// IDE used: Visual Studio Code
 #include <iostream>
 #include <map>
 #include <fstream>
@@ -31,7 +31,7 @@ int main() {
         int airportCount = it->second; 
         cout << it->first << ": " << airportCount << endl; 
 
-        // Got code to find highest coutn while handing ties from the Extra Credit 2 Lab from Week 16
+        // Got code to find highest count while handing ties from the Extra Credit 2 Lab from Week 16
         if(airportCount == highestCount) { 
             highestAirportsCount.push_back(it->first); 
         } else if (airportCount > highestCount) { 
