@@ -39,5 +39,11 @@ int main() {
             highestAirportsCount.push_back(it->first); 
         }
     }
+
+    cout << endl << "Busiset airport(s) with count " << highestCount << endl; 
+    for(int i = 0; i < highestAirportsCount.size(); i++) { 
+        cout << highestAirportsCount.at(i) << " " << airportLog[highestAirportsCount.at(i)]<< endl; 
+    }
+
     return 0; 
 }
