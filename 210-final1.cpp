@@ -24,10 +24,20 @@ int main() {
         cout << "File could not open";
     }
 
+    int highestCount = 0; 
+    vector<string> highestAirportsCount;
     for(auto it = airportLog.begin(); it != airportLog.end(); it++) { 
         int airportCount = it->second; 
         cout << it->first << ": " << airportCount << endl; 
-    }
 
+        // Got code to find highest coutn while handing ties from the Extra Credit 2 Lab from Week 16
+        if(airportCount == highestCount) { 
+            highestAirportsCount.push_back(it->first); 
+        } else if (airportCount > highestCount) { 
+            highestCount = airportCount; 
+            highestAirportsCount.clear(); 
+            highestAirportsCount.push_back(it->first); 
+        }
+    }
     return 0; 
 }
