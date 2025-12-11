@@ -55,7 +55,7 @@ int main() {
 
     return 0; 
 }
-
+   
 void printWithinRange(map<string, int> airportLog, int low, int high) { 
     cout << "Airports with traffic in range [" << low << ", " << high << "]" << endl;
     for(auto it = airportLog.begin(); it != airportLog.end(); it++) { 
