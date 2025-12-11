@@ -11,9 +11,7 @@ void printWithinRange(map<string, int>, int, int);
 
 int main() { 
     map<string, int> airportLog; 
-
     ifstream inputFile("210-final-1-FA25.txt"); 
-
     string airportOrigin, airportDest; 
 
     if(inputFile.is_open()) { 
@@ -48,7 +46,6 @@ int main() {
     }
 
     cout << endl;
-
     printWithinRange(airportLog, 5, 8); 
     cout << endl;
     printWithinRange(airportLog, 8, 15); 
