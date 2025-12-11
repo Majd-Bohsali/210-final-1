@@ -26,6 +26,7 @@ int main() {
 
     int highestCount = 0; 
     vector<string> highestAirportsCount;
+    cout << "All airport traffic counts: " << endl;
     for(auto it = airportLog.begin(); it != airportLog.end(); it++) { 
         int airportCount = it->second; 
         cout << it->first << ": " << airportCount << endl; 
